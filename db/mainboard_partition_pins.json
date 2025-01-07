@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alarm",
+					"strict" : false
+				},
+				{
+					"name" : "display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display[7]",
+					"strict" : false
+				},
+				{
+					"name" : "display[8]",
+					"strict" : false
+				},
+				{
+					"name" : "display[9]",
+					"strict" : false
+				},
+				{
+					"name" : "display[10]",
+					"strict" : false
+				},
+				{
+					"name" : "display[11]",
+					"strict" : false
+				},
+				{
+					"name" : "display[12]",
+					"strict" : false
+				},
+				{
+					"name" : "display[13]",
+					"strict" : false
+				},
+				{
+					"name" : "display[14]",
+					"strict" : false
+				},
+				{
+					"name" : "display[15]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "temp_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
