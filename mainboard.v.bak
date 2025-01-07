@@ -1,0 +1,52 @@
+mainboardmodule mainboard (
+    input [3:0] smoke_detector,    // Deteksi asap (4-bit)
+    input [3:0] heat_detector,     // Deteksi panas (4-bit)
+    input clk,                     // Clock
+    input reset,                   // Reset sistem
+    output reg [3:0] fire_alarm,   // Output alarm kebakaran
+    output reg call,               // Output panggilan darurat
+    output reg water               // Output air menyala
+);
+
+    // Sinyal sementara untuk alarm dan call
+    reg [3:0] fire_alarm_temp;
+    reg call_temp;
+    
+    // Status sistem
+    reg system_active;
+
+    // Logika deteksi alarm
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            fire_alarm_temp = 0;
+            call_temp = 0;
+            system_active <= 0;
+            fire_alarm <= 0;
+            call <= 0;
+            water <= 0;
+        end else begin
+            // Deteksi alarm berdasarkan asap dan panas
+            fire_alarm_temp[0] = smoke_detector[0] | heat_detector[0];
+            fire_alarm_temp[1] = smoke_detector[1] | heat_detector[1];
+            fire_alarm_temp[2] = smoke_detector[2] | heat_detector[2];
+            fire_alarm_temp[3] = smoke_detector[3] | heat_detector[3];
+            
+            // Deteksi panggilan darurat
+            call_temp = heat_detector[0] | heat_detector[1] | heat_detector[2] | heat_detector[3];
+            
+            // Jika terdeteksi asap atau panas, aktifkan alarm dan air
+            if (fire_alarm_temp[0] | fire_alarm_temp[1] | fire_alarm_temp[2] | fire_alarm_temp[3]) begin
+                system_active <= 1;
+                fire_alarm <= fire_alarm_temp; // Aktifkan alarm sesuai deteksi
+                call <= call_temp;             // Memanggil
+                water <= 1;                    // Nyalakan air
+            end else begin
+                system_active <= 0;
+                fire_alarm <= 0;              // Matikan alarm
+                call <= 0;                    // Matikan call
+                water <= 0;                   // Matikan air
+            end
+        end
+    end
+
+endmodule

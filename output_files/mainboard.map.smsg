@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at mainboard.v(19): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/23.1std/quartus/kelompok2/mainboard.v Line: 19
