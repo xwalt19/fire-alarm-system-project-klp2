@@ -1,4 +1,4 @@
-Fitter Status : Successful - Tue Jan  7 08:47:45 2025
+Fitter Status : Successful - Tue Jan  7 10:29:13 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : mainboard
 Top-level Entity Name : mainboard
@@ -6,7 +6,7 @@ Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 28 / 32,070 ( < 1 % )
-Total registers : 72
+Total registers : 61
 Total pins : 35 / 457 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

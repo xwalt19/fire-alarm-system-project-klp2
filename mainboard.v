@@ -7,24 +7,28 @@ module mainboard (
 );
 
 // Parameters
-parameter THRESHOLD = 16'd500;    // Temperature threshold in 0.1°C (e.g., 50.0°C = 500)
+parameter THRESHOLD = 16'd500;    // Temperature threshold in 0.1°C
 parameter TIME_DELAY = 4'd10;     // Delay time in seconds
+parameter INPUT_CLK_FREQ = 50_000_000;  // Input clock frequency
+parameter OUTPUT_CLK_FREQ = 1;         // Desired output frequency
+localparam DIVIDER_LIMIT = (INPUT_CLK_FREQ / (2 * OUTPUT_CLK_FREQ)) - 1;
+
 
 // Internal Registers
 reg [31:0] clk_divider;           // Clock divider for 1 Hz generation
 reg one_sec_clk;                  // 1 Hz clock signal
 reg [3:0] timer_counter;          // Timer to count seconds above threshold
 
-// ** Clock Divider Logic **: Generate 1 Hz Clock from 50 MHz
+// ** Clock Divider Logic **
 always @(posedge clk or posedge reset) begin
     if (reset) begin
         clk_divider <= 32'b0;
         one_sec_clk <= 1'b0;
-    end else if (clk_divider == 32'd49_999_999) begin // Divide clock
+    end else if (clk_divider == DIVIDER_LIMIT) begin
         clk_divider <= 32'b0;
         one_sec_clk <= ~one_sec_clk;
     end else begin
-        clk_divider <= clk_divider + 1;
+        clk_divider <= clk_divider + 1;  // Ensure this line is clean of any invalid characters
     end
 end
 
