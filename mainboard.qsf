@@ -58,7 +58,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE testbench.v
 set_location_assignment PIN_W24 -to alarm
-set_location_assignment PIN_AB30 -to clk
+set_location_assignment PIN_AC18 -to clk
 set_location_assignment PIN_AA25 -to display[15]
 set_location_assignment PIN_AH30 -to display[14]
 set_location_assignment PIN_W22 -to display[13]
@@ -75,7 +75,7 @@ set_location_assignment PIN_AF29 -to display[3]
 set_location_assignment PIN_AE28 -to display[2]
 set_location_assignment PIN_AE11 -to display[1]
 set_location_assignment PIN_AC27 -to display[0]
-set_location_assignment PIN_AE29 -to reset
+set_location_assignment PIN_AC12 -to reset
 set_location_assignment PIN_AE27 -to temp_data[15]
 set_location_assignment PIN_V23 -to temp_data[14]
 set_location_assignment PIN_AB22 -to temp_data[13]
